@@ -1,0 +1,5 @@
+Item: <input type="text" name="item" style="width: 200px;" [(ngModel)]="newItem.description">
+Hours: <input type="text" style="width: 20px" name="hours"  [(ngModel)]="newItem.hours">
+Hourly Rate:  <input type="text" style="width: 20px" name="hourly rate" [(ngModel)]="newItem.hourlyRate">
+
+<button type="button" (click)="onAddNewItem(newItem)">Add Hours</button>

@@ -1,0 +1,26 @@
+<table>
+  <tr class="heading">
+      <td>
+          Items
+      </td>
+      <td  class="align-right">
+         Hours Worked
+      </td>
+        <td  class="align-right">
+         Hourly Rate
+      </td>
+        <td  class="align-right">
+         Total
+      </td>
+  </tr>
+
+  <tbody id="tableStuff">
+  <!-- use this id to show the Array in question 4a -->
+  <tr class="item" *ngFor="let item of itmeService.items">
+    <td>{{ item.description }}</td>
+    <td  class="align-right">{{ item.hours }}</td>
+    <td  class="align-right">{{ item.hourlyRate | currency }}</td>
+    <td class="align-right">{{ (item.hours * item.hourlyRate) | currency }}</td>
+  </tr>
+  </tbody>
+</table>

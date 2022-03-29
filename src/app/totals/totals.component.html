@@ -1,0 +1,32 @@
+<table>
+  <tr><td >
+       Total Hours
+  </td>
+    <td>{{ itemService.calculateTotalHours() }}</td><td></td><td></td>
+  </tr>
+  <ng-container *ngIf="itemService.caculateTotals() as totals">
+    <tr class="subtotal">
+       <td></td>
+        <td></td> <td  class="align-right">Sub Total:</td>
+       <td  class="align-right">
+           {{ totals.subTotal | currency}}
+       </td>
+   </tr>
+      <tr class="taxes">
+       <td></td> <td></td> <td  class="align-right">Taxes (13%): </td>
+
+       <td  class="align-right">
+          {{ totals.taxes | currency }}
+       </td>
+   </tr>
+
+   <tr class="total">
+       <td></td> <td></td> <td  class="align-right"> Total:</td>
+
+       <td  class="align-right">
+          {{ totals.total | currency }}
+       </td>
+   </tr>
+  </ng-container>
+
+</table>

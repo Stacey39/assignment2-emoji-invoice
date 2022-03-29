@@ -1,0 +1,31 @@
+<table>
+  <tr class="heading">
+      <td colspan="3">
+          Payment Method
+      </td>
+
+      <td>
+          Payment Types Accepted
+      </td>
+  </tr>
+
+  <tr class="details">
+      <td colspan="3">
+          {{ paymentType }}
+      </td>
+
+      <td>
+          <select [(ngModel)]="paymentType">
+              <option value="Check">
+                      Check
+              </option>
+              <option value="Cash">
+                      Cash
+              </option>
+               <option value="Credit Card">
+                      Credit Card
+              </option>
+          </select>
+      </td>
+  </tr>
+</table>
